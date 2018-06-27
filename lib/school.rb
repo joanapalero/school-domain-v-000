@@ -2,13 +2,14 @@
 require 'pry'
 
 class School
-  attr_accessor :roster
-  attr_reader :name
+  # attr_accessor :roster
+  attr_reader :name, :student, :roster
   
   def initialize(name)
     @name = name
-    @roster = {}
   end
+  
+  ROSTER = []
   
   def add_student(name, grade)
     if
@@ -18,7 +19,7 @@ class School
     else
       @roster[grade] << name
     end
-  ROSTER = []
+  
   
   def grade(grade)
     @roster[grade]
